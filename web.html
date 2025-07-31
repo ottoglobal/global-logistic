@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OttoGlobal Logistics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">OttoGlobal <span>LOGISTICS</span></h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#tracking">Track Shipment</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Fast, Reliable, Global Logistics Solutions</h2>
+      <a href="#tracking" class="cta">Track Your Shipment</a>
+    </div>
+  </section>
+
+  <!-- Shipment Tracking Section -->
+  <section id="tracking" class="tracking">
+    <div class="container">
+      <h3>Track Your Shipment</h3>
+      <form id="tracking-form">
+        <input type="text" id="tracking-number" placeholder="Enter Tracking Number" required />
+        <button type="submit">Track</button>
+      </form>
+      <div id="tracking-result"></div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section id="quote" class="quote-form">
+    <div class="container">
+      <h3>Request a Quote</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Origin City" required />
+        <input type="text" placeholder="Destination City" required />
+        <input type="text" placeholder="Package Weight (kg)" required />
+        <textarea placeholder="Additional Details"></textarea>
+        <button type="submit">Submit Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h3>Our Services</h3>
+      <div class="service-grid">
+        <div><h4>Freight Shipping</h4><p>International air & sea freight.</p></div>
+        <div><h4>Customs Clearance</h4><p>Simplified border procedures.</p></div>
+        <div><h4>Warehousing</h4><p>Secure storage solutions.</p></div>
+        <div><h4>Last-Mile Delivery</h4><p>Fast door-to-door services.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 OttoGlobal Logistics. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS: Shipment Tracking Mock Script -->
+  <script>
+    document.getElementById('tracking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const trackingNum = document.getElementById('tracking-number').value;
+      const result = document.getElementById('tracking-result');
+      result.innerHTML = `
+        <p><strong>Status:</strong> In Transit</p>
+        <p><strong>Tracking #:</strong> ${trackingNum}</p>
+        <p><strong>Last Location:</strong> New York Distribution Hub</p>
+        <p><strong>Estimated Delivery:</strong> August 2, 2025</p>
+      `;
+    });
+  </script>
+
+  <!-- Tawk.to Live Chat Widget -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/64db2e0b94cf5d49dc6b50a7/1h8u2srjv';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+
+</body>
+</html>.tracking, .quote-form {
+  background: #f0f0f0;
+  padding: 40px 0;
+  text-align: center;
+}
+.tracking input, .quote-form input, .quote-form textarea {
+  padding: 10px;
+  width: 250px;
+  margin: 5px;
+}
+.tracking button, .quote-form button {
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#tracking-result {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.quote-form textarea {
+  width: 90%;
+  height: 100px;
+  resize: none;
+}
